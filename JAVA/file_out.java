@@ -7,7 +7,7 @@ public class Main{
 		String fileName = "out.txt";
 		PrintWriter outputStream = null;
 		try{
-			outputStream= new PrintWriter(fileName);
+			outputStream = new PrintWriter(fileName);
 		}
 		catch(FileNotFoundException e){
 		System.out.println("Error opening the file"+ fileName);
@@ -15,8 +15,8 @@ public class Main{
 		}
 		System.out.println("Enter three lines of text:");
 		Scanner keyboard= new Scanner(System.in);
-		for(int count= 1; count<= 3; count++){
-			String line= keyboard.nextLine();
+		for(int count = 1; count<= 3; count++){
+			String line = keyboard.nextLine();
 			outputStream.println(count+ " " + line);
 		}
 		outputStream.close();
