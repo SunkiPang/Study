@@ -37,6 +37,12 @@ class Baseball {
 		}
 	}
 
+
+	//이제 해야 할 것.
+	//유저 넘버 받기
+	//숫자 비교하기
+
+
 	private void print_com_num(){
 			System.out.println("{ " + com[0] + " " + com[1] + " " + com[2] + " }");
 	}
