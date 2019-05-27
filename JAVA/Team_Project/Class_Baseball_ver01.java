@@ -3,17 +3,18 @@ import java.util.Scanner;
 
 
 class Baseball {
+	private String name;
 	private int[] com = new int[3]; //랜덤 값이 들어갈 배열
 	private int[] user = new int[3]; //사용자의 답변이 들어갈 배열
 	private int strike; //스트라이크
 	private int ball; //볼
+	private int is_clear = 0;
 
-	public Baseball() {
+	public Baseball(String init_name) {
 
 		Scanner kb = new Scanner(System.in);
+		name = init_name;
 
-		set_random();
-		print_com_num();
 	}
 
 	private void set_random(){
@@ -24,7 +25,6 @@ class Baseball {
 		for(int i = 0; i < 10 ; i++) {
 			already[i] = false; //false로 초기화
 		}
-
 
 		for (int i = 0; i < 10; i++)
 		while(count < 3) {
@@ -42,6 +42,16 @@ class Baseball {
 	//유저 넘버 받기
 	//숫자 비교하기
 
+	public void play(){
+		set_random();
+		print_com_num();
+	}
+
+	public boolean clear(){
+
+		return false;
+	}
+
 
 	private void print_com_num(){
 			System.out.println("{ " + com[0] + " " + com[1] + " " + com[2] + " }");
@@ -54,6 +64,6 @@ class Baseball {
 class Main {
   public static void main(String[] args) {
     Baseball b = new Baseball();
-
+	 b.play();
   }
 }
