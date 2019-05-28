@@ -14,7 +14,7 @@ class Baseball {
 
 		Scanner kb = new Scanner(System.in);
 		name = init_name;
-
+ 
 	}
 
 	private void set_random(){
