@@ -9,6 +9,8 @@ class Baseball {
 	private int strike; //스트라이크
 	private int ball; //볼
 	private int is_clear = 0;
+	private int max_count = 10;
+	private int curr_count = 0;
 
 	public Baseball(String init_name) {
 
@@ -62,14 +64,46 @@ class Baseball {
 		}
 	}
 
+	private void check_num(){
+		strike = 0;
+		ball = 0;
+		for(int i = 0; i < 3; i++){
+			for(int j = 0; j < 3; j++){
+				if (com[i] == user[j]){
+					if(i == j)
+						strike++;
+					else
+						ball++;
+				}
+			}
+		}
+
+		System.out.println("Strike : " + strike + " Ball : " + ball);
+
+		if(strike == 3){
+			System.out.println("I..... am .... inevitable......");
+			is_clear = 1;
+		}
+
+	}
+
 	//이제 해야 할 것.
 	//숫자 비교하기
 
 	public void play(){
 		set_random();
 		print_com_num();
-		set_user_num();
-		print_user_num();
+
+
+		for(curr_count = 0; curr_count < max_count; curr_count++){
+			if(is_clear == 0){
+				set_user_num();
+				print_user_num();
+				check_num();
+			}
+		}
+
+
 	}
 
 	public boolean clear(){
@@ -87,6 +121,8 @@ class Baseball {
 	private void print_user_num(){
 			System.out.println("{ " + user[0] + " " + user[1] + " " + user[2] + " }");
 	}
+
+	
 
 }
 
