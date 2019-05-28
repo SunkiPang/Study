@@ -73,8 +73,10 @@ class Baseball {
 	}
 
 	public boolean clear(){
-
-		return false;
+		if(is_clear == 1)
+			return true;
+		else
+			return false;
 	}
 
 
