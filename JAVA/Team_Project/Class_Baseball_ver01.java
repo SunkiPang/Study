@@ -50,14 +50,10 @@ class Baseball {
 		return false;
 	}
 
-
 	private void print_com_num(){
 			System.out.println("{ " + com[0] + " " + com[1] + " " + com[2] + " }");
 	}
-
 }
-
-
 
 class Main {
   public static void main(String[] args) {
