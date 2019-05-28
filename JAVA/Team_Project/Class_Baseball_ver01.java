@@ -14,7 +14,7 @@ class Baseball {
 
 		Scanner kb = new Scanner(System.in);
 		name = init_name;
- 
+
 	}
 
 	private void set_random(){
@@ -39,7 +39,6 @@ class Baseball {
 
 
 	//이제 해야 할 것.
-	//유저 넘버 받기
 	//숫자 비교하기
 
 	public void play(){
