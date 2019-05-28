@@ -12,7 +12,7 @@ class Baseball {
 
 	public Baseball(String init_name) {
 
-		Scanner kb = new Scanner(System.in);
+
 		name = init_name;
 
 	}
@@ -37,12 +37,39 @@ class Baseball {
 		}
 	}
 
+	private void set_user_num(){
+
+		Scanner kb = new Scanner(System.in);
+		int count = 0;
+		while(count != 3){
+			System.out.println("Input your " + (count+1) + " number ");
+			int temp = kb.nextInt();
+			int flag = 0;
+			for(int i = 0; i < count; i++){
+				if(user[i] == temp){
+					flag = 1;
+					break;
+				}
+			}
+			if(flag == 1){
+				System.out.println("Duplicate!!");
+				flag = 0;
+			}
+			else{
+				user[count] = temp;
+				count++;
+			}
+		}
+	}
+
 	//이제 해야 할 것.
 	//숫자 비교하기
 
 	public void play(){
 		set_random();
 		print_com_num();
+		set_user_num();
+		print_user_num();
 	}
 
 	public boolean clear(){
@@ -50,14 +77,22 @@ class Baseball {
 		return false;
 	}
 
+
 	private void print_com_num(){
 			System.out.println("{ " + com[0] + " " + com[1] + " " + com[2] + " }");
 	}
+
+	private void print_user_num(){
+			System.out.println("{ " + user[0] + " " + user[1] + " " + user[2] + " }");
+	}
+
 }
+
+
 
 class Main {
   public static void main(String[] args) {
-    Baseball b = new Baseball();
-	 b.play();
+    Baseball b = new Baseball("Stark");
+	b.play();
   }
 }
