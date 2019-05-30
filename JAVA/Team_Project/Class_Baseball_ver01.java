@@ -87,8 +87,6 @@ class Baseball {
 
 	}
 
-	//이제 해야 할 것.
-	//숫자 비교하기
 
 	public void play(){
 		set_random();
@@ -122,7 +120,7 @@ class Baseball {
 			System.out.println("{ " + user[0] + " " + user[1] + " " + user[2] + " }");
 	}
 
-	
+
 
 }
 
