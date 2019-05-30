@@ -98,8 +98,6 @@ class Baseball {
 				check_num();
 			}
 		}
-
-
 	}
 
 	public boolean clear(){
