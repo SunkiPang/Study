@@ -77,14 +77,12 @@ class Baseball {
 				}
 			}
 		}
-
 		System.out.println("Strike : " + strike + " Ball : " + ball);
 
 		if(strike == 3){
 			System.out.println("I..... am .... inevitable......");
 			is_clear = 1;
 		}
-
 	}
 
 
@@ -119,9 +117,6 @@ class Baseball {
 	private void print_user_num(){
 			System.out.println("{ " + user[0] + " " + user[1] + " " + user[2] + " }");
 	}
-
-
-
 }
 
 
