@@ -96,7 +96,7 @@ class Baseball {
 				set_user_num();
 				print_user_num();
 				check_num();
-			}
+			}  
 		}
 
 
