@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.IOException;
 
-
+ 
 
 
 class Main {
@@ -20,6 +20,11 @@ class Main {
    String record_name[] = new String[3];
    long record_time[] = new long[3];
    long max_time = 999999;
+
+  for(int i = 0; i < 3 ; i++){
+      record_name[i] = null;
+      record_time[i] = max_time;
+   }
 
       String file_rank = "rank.txt";
       int record_count = 0;
@@ -50,7 +55,7 @@ class Main {
 
 
    System.out.println("\nYour name is " + name);
-   System.out.println("??? : Here is a space stone, you need 5 stones to meet thanos. good luck! \n");
+   System.out.println("Nick Fury : Here is a space stone, you need 5 stones to meet thanos. good luck! \n");
 
 
 
@@ -77,10 +82,10 @@ class Main {
       else if(m == 5) break;
    }
 
-
-   System.out.println("\n??? : Here is a soul stone");
-   System.out.println("??? : You are now in a final stage, here is a power stone ");
-   System.out.println("??? : You made it! Good luck with thanos!");
+   System.out.println("\n\nNick Fury: Since you got this far.. you deserve the last stone");
+   System.out.println("\nNick Fury : Here is a soul stone");
+   System.out.println("Nick Fury : You are now in a final stage, here is a power stone ");
+   System.out.println("Nick Fury : You made it! Good luck with thanos!");
 
 
     String fn = "Thanos0.txt";
